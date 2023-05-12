@@ -103,7 +103,9 @@ class SpotifyAnalyzer:
                 writer.writerow(["Date"] + list(track_dict.keys()))
 
             writer.writerow([date] + [f"{v[0]} - {v[1]} - {v[2]} mins" for v in track_dict.values()])
-
-root = Tk()
-app = SpotifyAnalyzer(root)
-root.mainloop()
+def main():
+    root = Tk()
+    app = SpotifyAnalyzer(root)
+    root.mainloop()
+if __name__ == '__main__':
+    main()
